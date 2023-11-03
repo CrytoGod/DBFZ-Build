@@ -1,0 +1,226 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+    color: aliceblue;
+}
+
+.hidden {
+    display: none;
+}
+
+/* main header rules */
+
+header {
+    padding: 10px 0px;
+}
+
+#main-logo {
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+}
+
+#character_nav {
+    background-color: white;
+    background-image: url('../images/ssj_goku.jpeg');
+    background-repeat: no-repeat; /* Corrected */
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.characters {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.characters li {
+    height: 220px;
+    margin: 10px 8px;
+    background-color: white;
+    text-align: left;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease; /* Corrected */
+    box-shadow: 0 155px 0 0 rgb(255,130,0) inset;
+}
+
+.characters li:hover{
+    box-shadow: 0 220px 0 0 rgb(255,130,0) inset;
+}
+
+.characters li h5{
+    color: rgb(54, 50, 50);
+    padding: 12px 8px;
+}
+
+.characters li a {
+    text-decoration: none;
+}
+
+article h3, #instruction h3{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+article, #instruction {
+    padding: 20px;
+}
+
+article p, #instruction p {
+    width: 80%;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*----Sprite----*/
+
+.sprite {
+    width: 150px;
+    height: 150px;
+    background-image: url('../images/DBFZSprites.jpg');
+}
+
+#carol {
+    background-position: -150px 0;
+}
+
+#clint {
+    background-position: -300px 0;
+}
+
+#hulk {
+    background-position: -450px 0;
+}
+
+#thor {
+    background-position: -600px 0;
+}
+
+#widow {
+    background-position: -750px 0;
+}
+
+#cap:hover, #carol:hover, #clint:hover, #hulk:hover, #thor:hover, #widow:hover {
+    background-position-y: -150px ;
+}
+
+/*----footer Rules----*/
+
+footer {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.stickyfooter {
+    position: sticky;
+    top: 100%;
+    height: 20px;
+    background-color: rgb(40, 37, 37);
+}
+
+.lightbox {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.85);
+    background-image: url(../images/ui_main.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    background-position: 0px bottom;
+    z-index: 5000;
+    display: none;
+}
+
+
+
+#lightbox2 {
+    background-image: url(../images/ego_main.jpeg);
+    background-size: 60vh;
+    background-size: 40%;
+    background-position: 50px;
+    
+    
+
+}
+
+#lightbox3 {
+    background-image: url(../images/beast_main.jpeg);
+    background-size: 60vh;
+    background-size: 45%;
+    background-position: 50px;
+    
+
+}
+
+#lightbox4 {
+    background-image: url(../images/rose_main.jpeg);
+    background-size: 60vh;
+    background-size: 45%;
+    background-position: 50px;
+    
+
+}
+
+#lightbox5 {
+    background-image: url(../images/gegeta_main3.jpeg);
+    background-size: 100vh;
+    background-size: 40vw;
+    background-position: 50px;
+}
+
+
+#lightbox6 {
+    background-image: url(../images/legendary_main.jpeg);
+    background-size: 60vh;
+    background-size: 45%;
+    background-position: 50px;
+    
+
+}
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 95%;
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lightbox_close:hover {
+    opacity: 0.5;
+    color: red;
+}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+
+.lb_text, .lb_heading {
+    text-align: left;
+}
+
+.lb_text {
+    margin-left: 0;
+    padding-top: 32px;
+    line-height: 1.6 !important;
+}
+
+.lightbox:target {
+    display: block;
+}
